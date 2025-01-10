@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Paper Checker</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="html2.css">
+    <script>
+        function showFeedbackPopup() {
+            document.getElementById('feedback-modal').style.display = 'block';
+        }
+
+        function hideFeedbackPopup() {
+            document.getElementById('feedback-modal').style.display = 'none';
+            alert('Message sent!');
+        }
+    </script>
+</head>
+<body>
+
+<!-- Navigation Bar with Bootstrap Hamburger Menu -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Conference Paper Checker</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#steps">Steps</a></li>
+            <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+            <li class="nav-item"><a class="nav-link" href="#faq">FAQs</a></li>
+            <li class="nav-item" id="feedback-link"><a class="nav-link" href="#feedback" onclick="showFeedbackPopup()">Feedback</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="d-flex flex-column justify-content-center align-items-center hero">
+    <h1 class="hero-heading p-2">Analyze research paper for conference using our analyzer</h1>
+    <p class="hero-para">Utilize our advanced research paper analysis tool to efficiently prepare your submission for conference consideration.</p>
+    <h1 class="hero-heading p-2">Make your conference with new innovation ideas, Immediate response for research paper analyzing with ease of use</h1>
+    <p class="hero-para">Elevate your conference experience with innovative ideas and cutting-edge tools. Benefit from immediate, accurate analysis of your research paper with an intuitive, user-friendly interface that simplifies the process.</p>
+</div>
+
+<!-- About Us Section -->
+<div class="d-flex flex-row justify-content-center">
+    <div id="about" class="about-container w-50 p-3">
+        <h2>About Our Research Paper Checker</h2>
+        <p>Our tool helps authors ensure their research papers meet conference requirements, including plagiarism detection, formatting checks, and more.</p>
+    </div>
+
+    <!-- Steps Section with Bootstrap Modal -->
+    <div id="steps" class="section text-center p-3 about-container-two w-50">
+        <h2>Steps to Check Your Paper</h2>
+        <div>
+            <ol class="steps-list">
+                <li>Click the "Check Paper" button.</li>
+                <li>Upload your research paper file from your computer.</li>
+                <li>View the results and take necessary actions.</li>
+            </ol>
+        </div>
+        
+        <!-- Trigger Modal Button -->
+        <button class="button btn btn-primary" data-toggle="modal" data-target="#stepsModal"><i class="fas fa-upload"></i> Check Paper</button>
+    </div>
+</div>
+
+<!-- Modal for Steps -->
+<div class="modal fade" id="stepsModal" tabindex="-1" role="dialog" aria-labelledby="stepsModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="stepsModalLabel">Research Paper Analyzer Steps</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Follow these steps to analyze your research paper effectively.</p>
+                <ol>
+                    <li>Upload your research paper.</li>
+                    <li>Review the results of plagiarism and formatting checks.</li>
+                    <li>Make necessary corrections based on feedback.</li>
+                </ol>
+                <button class="button btn btn-success">Analyze Paper</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="newsletter">
+        <p>Subscribe to our newsletter for updates:</p>
+        <input type="email" placeholder="Enter your email" />
+        <button>Subscribe</button>
+    </div>
+    <div>
+        <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+    </div>
+    <p>&copy; 2025 Conference Paper Checker. All rights reserved.</p>
+</footer>
+
+<!-- Feedback Modal -->
+<div id="feedback-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close-button" onclick="hideFeedbackPopup()">&times;</span>
+        <h2>We Value Your Feedback</h2>
+        <p>Help us improve by sharing your thoughts.</p>
+        <form action="#" method="post" class="feedback-form">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="rating">Rate Our Website:</label>
+                <select id="rating" name="rating" required>
+                    <option value="" disabled selected>Select rating</option>
+                    <option value="5">Excellent</option>
+                    <option value="4">Good</option>
+                    <option value="3">Average</option>
+                    <option value="2">Below Average</option>
+                    <option value="1">Poor</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="feedback">Your Feedback:</label>
+                <textarea id="feedback" name="feedback" rows="4" placeholder="Write your feedback here..." required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Submit Feedback</button>
+        </form>
+    </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

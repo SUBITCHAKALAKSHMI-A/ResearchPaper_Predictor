@@ -1,0 +1,205 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Body and Overall Layout */
+body {
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #343a40;
+    padding: 15px 30px;
+}
+
+.navbar-brand {
+    font-weight: 500;
+    font-size: 24px;
+    color: #fff;
+}
+
+.navbar-nav .nav-link {
+    color: #ddd !important;
+    margin-left: 20px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #fff !important;
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero-heading {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.hero-para {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* About Section */
+.about-container, .about-container-two {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.about-container h2, .about-container-two h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+/* Steps Section */
+.steps-list {
+    list-style-type: decimal;
+    margin-left: 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.steps-list li {
+    margin-bottom: 10px;
+}
+
+/* Modal */
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-body {
+    padding-top: 10px;
+}
+
+.modal-footer {
+    border-top: none;
+    text-align: center;
+}
+
+.close {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+button.btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+button.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Feedback Form */
+#feedback-modal .modal-content {
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+}
+
+.feedback-form .form-group {
+    margin-bottom: 15px;
+}
+
+.feedback-form input, .feedback-form select, .feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.submit-button:hover {
+    background-color: #218838;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .newsletter {
+    margin-bottom: 20px;
+}
+
+footer .newsletter input {
+    padding: 10px;
+    width: 70%;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+footer .newsletter button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+footer .newsletter button:hover {
+    background-color: #0056b3;
+}
+
+footer a {
+    color: #ddd;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        padding: 50px 10px;
+    }
+
+    .about-container, .about-container-two {
+        width: 90%;
+    }
+
+    .steps-list {
+        font-size: 14px;
+    }
+}
